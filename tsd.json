@@ -1,0 +1,24 @@
+{
+  "version": "v4",
+  "repo": "borisyankov/DefinitelyTyped",
+  "ref": "master",
+  "path": "typings",
+  "bundle": "typings/tsd.d.ts",
+  "installed": {
+    "rx/rx.d.ts": {
+      "commit": "04cf218909016059c09061d0b1b34f6ea63a9f48"
+    },
+    "es6-promise/es6-promise.d.ts": {
+      "commit": "04cf218909016059c09061d0b1b34f6ea63a9f48"
+    },
+    "angular2/angular2.d.ts": {
+      "commit": "04cf218909016059c09061d0b1b34f6ea63a9f48"
+    },
+    "rx/rx-lite.d.ts": {
+      "commit": "04cf218909016059c09061d0b1b34f6ea63a9f48"
+    },
+    "angular2/router.d.ts": {
+      "commit": "04cf218909016059c09061d0b1b34f6ea63a9f48"
+    }
+  }
+}

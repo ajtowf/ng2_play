@@ -1,0 +1,24 @@
+{
+    "version": "1.5.0",
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "declaration": false,
+        "noImplicitAny": false,
+        "removeComments": true,
+        "noLib": false,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true
+    },
+
+    "filesGlob": [
+        "./**/*.ts"
+    ],
+
+    "files": [
+        "./app/app.ts",
+        "./app/models.ts",
+        "./typings/angular2/angular2.d.ts",
+        "./typings/angular2/router.d.ts"
+    ]
+}
