@@ -10,7 +10,7 @@
   		<input class="form-control" [ng-form-control]="myForm.controls['newTodo']" placeholder="new todo">
 	</div>
   
-  <button class="btn btn-primary" type="submit">Add Todo</button>
+  <button class="btn btn-primary" type="submit" [disabled]="!myForm.valid">Add Todo</button>
   <button class="btn btn-warning" *ng-if="todos.length > 1" (click)="completeAll()">Complete All</button>	
 </div>
 

@@ -1,46 +1,37 @@
-import {Component, View, bootstrap, NgFor, NgIf} from 'angular2/angular2';
-import {FORM_DIRECTIVES, FormBuilder, ControlGroup, Control} from 'angular2/angular2';
-import {Validators} from 'angular2/angular2';
-import {TodoItem} from 'models'
+import {Component, View, bootstrap, bind} from 'angular2/angular2';
+import {routerInjectables, RouterOutlet, RouteConfig, RouterLink} from 'angular2/router'
+
+import {LocationStrategy, HTML5LocationStrategy, HashLocationStrategy} from 'angular2/router'
+
+import { todo } from './components/todo/todo';
+import { about } from './components/about/about';
 
 @Component({
-  selector: 'app',
-  viewBindings: [FormBuilder]
+	selector: 'app'
 })
 @View({
-  templateUrl: 'app.html', directives: [NgFor, NgIf, FORM_DIRECTIVES]
+	template: `
+		<div class="container">
+			<nav>
+				<ul>
+					<li><a [router-link]="['/home']">Todo</a></li>
+					<li><a [router-link]="['/about', {'id': 'Hello world'}]">About</a></li>
+				</ul>
+			</nav>
+			<router-outlet></router-outlet>
+		</div>
+	`,
+	directives: [RouterOutlet, RouterLink]
 })
+@RouteConfig([
+	{ path: '/', component: todo, as: 'home' },
+	{ path: '/about/:id', component: about, as: 'about' }
+])
 class AppComponent {
-  todos: Array<TodoItem>;
-  
-  myForm: ControlGroup;
-  newTodo: Control;
-  
-  constructor(fb: FormBuilder) {
-    this.todos = new Array<TodoItem>();    
-    this.todos.push(new TodoItem("Hello world", false));
-    
-    this.myForm = fb.group({
-        newTodo: ['', Validators.required]
-    });
-    
-    this.newTodo = this.myForm.controls['newTodo'];
-  }
-  
-  removeTodo(item: TodoItem) {
-    this.todos.splice(this.todos.indexOf(item), 1);
-  }
-  
-  onSubmit() {
-    this.todos.push(new TodoItem(this.newTodo.value, false));    
-    this.newTodo.updateValue('');
-  }
-  
-  completeAll() {    
-    for (var todo of this.todos) {
-      todo.completed = true;
-    }
-  }
+	
 }
 
-bootstrap(AppComponent);
+bootstrap(AppComponent, [
+	routerInjectables, 
+	bind(LocationStrategy).toClass(HashLocationStrategy)
+]);

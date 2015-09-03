@@ -18,6 +18,8 @@
     "files": [
         "./app/app.ts",
         "./app/models.ts",
+        "./app/components/about/about.ts",
+        "./app/components/todo/todo.ts",
         "./typings/angular2/angular2.d.ts",
         "./typings/angular2/router.d.ts"
     ]
