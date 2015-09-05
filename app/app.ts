@@ -1,7 +1,7 @@
 import {Component, View, bootstrap, bind} from 'angular2/angular2';
-import {routerInjectables, RouterOutlet, RouteConfig, RouterLink} from 'angular2/router'
+import {ROUTER_BINDINGS, RouterOutlet, RouteConfig, RouterLink} from 'angular2/router'
 
-import {LocationStrategy, HTML5LocationStrategy, HashLocationStrategy} from 'angular2/router'
+import {LocationStrategy, HashLocationStrategy} from 'angular2/router'
 
 import { todo } from './components/todo/todo';
 import { about } from './components/about/about';
@@ -28,10 +28,10 @@ import { about } from './components/about/about';
 	{ path: '/about/:id', component: about, as: 'about' }
 ])
 class AppComponent {
-	
+
 }
 
 bootstrap(AppComponent, [
-	routerInjectables, 
+	ROUTER_BINDINGS,
 	bind(LocationStrategy).toClass(HashLocationStrategy)
 ]);

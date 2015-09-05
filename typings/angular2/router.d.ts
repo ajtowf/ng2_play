@@ -1,4 +1,4 @@
-// Type definitions for Angular v2.0.0-alpha.35
+// Type definitions for Angular v2.0.0-alpha.36
 // Project: http://angular.io/
 // Definitions by: angular team <https://github.com/angular/>
 // Definitions: https://github.com/borisyankov/DefinitelyTyped
@@ -109,7 +109,7 @@ declare module ngRouter {
     /**
      * Subscribe to URL updates from the router
      */
-     subscribe(onNext: (value: any) => void): void;
+     subscribe(onNext: (value: any) => void): Object;
     
 
     /**
@@ -214,7 +214,7 @@ declare module ngRouter {
     
      visibleHref: string;
     
-     routeParams: void;
+     routeParams: any;
     
      onClick(): boolean;
   }
@@ -291,7 +291,7 @@ declare module ngRouter {
      back(): void;
   }
   
-  class HTML5LocationStrategy extends LocationStrategy {
+  class PathLocationStrategy extends LocationStrategy {
     
      onPopState(fn: EventListener): void;
     
@@ -551,13 +551,13 @@ declare module ngRouter {
     
      params: StringMap<string, any>;
     
-     componentType: void;
+     componentType: any;
     
      resolveComponentType(): Promise<Type>;
     
-     specificity: void;
+     specificity: any;
     
-     terminal: void;
+     terminal: any;
     
      routeData(): Object;
   }
@@ -594,9 +594,11 @@ declare module ngRouter {
   
   }
   
-  const routerDirectives : List<any> ;
+  const ROUTE_DATA : OpaqueToken ;
   
-  var routerInjectables : List<any> ;
+  const ROUTER_DIRECTIVES : List<any> ;
+  
+  const ROUTER_BINDINGS : List<any> ;
   
   class Route implements RouteDefinition {
     
@@ -666,8 +668,6 @@ declare module ngRouter {
     
      data?: any;
   }
-  
-  const ROUTE_DATA : OpaqueToken ;
   
   var RouteConfig : (configs: List<RouteDefinition>) => ClassDecorator ;
   
