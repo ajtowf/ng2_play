@@ -7,7 +7,8 @@
         "noImplicitAny": false,
         "removeComments": true,
         "noLib": false,
-        "emitDecoratorMetadata": true
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true
     },
     "filesGlob": [
         "./**/*.ts"
