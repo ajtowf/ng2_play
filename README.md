@@ -10,6 +10,6 @@
 - Blog @ http://www.towfeek.se/2015/08/angularjs-2-0-forms-validation/
 - Screencast @ https://youtu.be/267ClmzfzvI
 
-## Routing Routing Hands-on — Everything you need to know in 13 minutes
+## Routing — Everything you need to know in 13 minutes
 
 - Screencast @ https://youtu.be/ZsGRiHSaOxM
