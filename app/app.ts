@@ -1,10 +1,10 @@
 import {Component, View, bootstrap, bind} from 'angular2/angular2';
-import {ROUTER_BINDINGS, RouterOutlet, RouteConfig, RouterLink} from 'angular2/router'
+import {ROUTER_BINDINGS, RouterOutlet, RouteConfig, RouterLink} from 'angular2/router';
 
-import {LocationStrategy, HashLocationStrategy} from 'angular2/router'
+import {LocationStrategy, HashLocationStrategy} from 'angular2/router';
 
-import { todo } from './components/todo/todo';
-import { about } from './components/about/about';
+import { Todo } from './components/todo/todo';
+import { About } from './components/about/about';
 
 @Component({
 	selector: 'app'
@@ -24,8 +24,8 @@ import { about } from './components/about/about';
 	directives: [RouterOutlet, RouterLink]
 })
 @RouteConfig([
-	{ path: '/', component: todo, as: 'home' },
-	{ path: '/about/:id', component: about, as: 'about' }
+	{ path: '/', component: Todo, as: 'home' },
+	{ path: '/about/:id', component: About, as: 'about' }
 ])
 class AppComponent {
 

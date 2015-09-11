@@ -18,3 +18,7 @@ Run the following commands to run the application
 ## Routing — Everything you need to know in 13 minutes
 
 - Screencast @ https://youtu.be/ZsGRiHSaOxM
+
+## Build automation with Gulp
+
+- Screencast @ https://youtu.be/7xOubdqyqaY
