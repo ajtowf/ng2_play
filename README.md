@@ -1,5 +1,10 @@
 ## Angular 2 Play
 
+Run the following commands to run the application
+
+    npm install
+    gulp
+
 ## First look - Created Todo App
 
 - Blog @ http://www.towfeek.se/2015/07/angularjs-2-overview/

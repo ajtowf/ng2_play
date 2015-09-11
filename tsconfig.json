@@ -9,20 +9,5 @@
         "noLib": false,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true
-    },
-    "filesGlob": [
-        "./**/*.ts"
-    ],
-    "files": [
-        "./app/app.ts",
-        "./app/components/about/about.ts",
-        "./app/components/todo/todo.ts",
-        "./app/models.ts",
-        "./typings/angular2/angular2.d.ts",
-        "./typings/angular2/router.d.ts",
-        "./typings/es6-promise/es6-promise.d.ts",
-        "./typings/rx/rx-lite.d.ts",
-        "./typings/rx/rx.d.ts",
-        "./typings/tsd.d.ts"
-    ]
+    }
 }
