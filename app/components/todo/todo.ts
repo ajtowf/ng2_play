@@ -1,7 +1,9 @@
+/// <reference path="../../models.ts"/>
+
 import {Component, View, NgFor, NgIf} from 'angular2/angular2';
 import {FORM_DIRECTIVES, FormBuilder, ControlGroup, Control} from 'angular2/angular2';
 import {Validators} from 'angular2/angular2';
-import {TodoItem} from 'models';
+import {TodoItem} from '../../models';
 
 @Component({
   selector: 'todo',
