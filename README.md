@@ -22,3 +22,7 @@ Run the following commands to run the application
 ## Build automation with Gulp
 
 - Screencast @ https://youtu.be/7xOubdqyqaY
+
+## Upgrade from alpha37 to beta0
+
+- Screencast @ https://youtu.be/1xHMaCzEoUI
