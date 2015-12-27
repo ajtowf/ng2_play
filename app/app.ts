@@ -1,6 +1,6 @@
 
 import {Component, View, bind} from 'angular2/core';
-import {ROUTER_PROVIDERS, RouterOutlet, RouteConfig, RouterLink} from 'angular2/router';
+import {ROUTER_PROVIDERS, RouterOutlet, RouteConfig, RouterLink, Location} from 'angular2/router';
 
 import {LocationStrategy, HashLocationStrategy} from 'angular2/router';
 
@@ -19,4 +19,12 @@ import { About } from './components/about/about';
 	{ path: '/about/:id', component: About, as: 'About' }
 ])
 export class AppComponent {
+    location: Location;
+    constructor(location: Location) {
+        this.location = location;
+    }
+
+    isActive(path) {
+        return this.location.path() === path;
+    }
 }
