@@ -44,7 +44,7 @@ gulp.task('serve', ['ts-lint', 'compile-ts'], function() {
         notify: true,
         reloadDelay: 0,
         server: {
-            baseDir: ['./','./node_modules', './app'],
+            baseDir: ['./'],
             middleware: superstatic({ debug: false})
         }
     });	

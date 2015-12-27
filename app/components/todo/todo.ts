@@ -10,7 +10,7 @@ import {TodoItem} from '../../models';
   viewBindings: [FormBuilder]
 })
 @View({
-  templateUrl: './components/todo/todo.html',
+  templateUrl: './app/components/todo/todo.html',
   directives: [FORM_DIRECTIVES]
 })
 export class Todo {
