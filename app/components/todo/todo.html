@@ -1,18 +1,20 @@
 <div *ngFor="#todo of todos">
-	<input type="checkbox" #chkbox [(checked)]="todo.completed">
+	<input type="checkbox" [(checked)]="todo.completed">
 	{{todo.text}}
 	<a class="glyphicon glyphicon-remove" (click)="removeTodo(todo)"></a>
 </div>
 
 <form [ngFormModel]="myForm" (submit)="onSubmit()" class="form-inline">
-	<div class="form-group"
-		[class.has-error]="!newTodo.valid && newTodo.touched">	
-  		<input class="form-control" [ngFormControl]="myForm.controls['newTodo']" placeholder="new todo">
+	<div class="form-group">	
+  		<input class="form-control" placeholder="What do you need to do?"
+          [class.has-error]="!myForm.controls['newTodo'].valid && myForm.controls['newTodo'].dirty"           
+          [ngFormControl]="myForm.controls['newTodo']"
+          [(ngModel)]="newTodoText">
 	</div>
   
   <button class="btn btn-primary" type="submit" [disabled]="!myForm.valid">Add Todo</button>
   <button class="btn btn-warning" *ngIf="todos.length > 1" (click)="completeAll()">Complete All</button>	
 </form>
 
-<div *ngIf="!myForm.valid && newTodo.touched" class="bg-warning">Form is invalid</div>
-<div *ngIf="!newTodo.valid && newTodo.touched" class="bg-warning">newTodo is invalid</div>
+<div *ngIf="!myForm.valid && myForm.dirty" class="bg-warning">Form is invalid</div>
+<div *ngIf="!newTodoControl.valid && newTodoControl.dirty" class="bg-warning">newTodo is invalid</div>
