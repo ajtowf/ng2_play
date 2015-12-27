@@ -1,6 +1,6 @@
-<div *ngFor="#todo of todos">
-	<input type="checkbox" [(checked)]="todo.completed">
-	{{todo.text}}
+<div *ngFor="#todo of todos; #i=index">
+	<input id="{{i}}" type="checkbox" [(checked)]="todo.completed">
+	<label [attr.for]="i">{{todo.text}}</label>
 	<a class="glyphicon glyphicon-remove" (click)="removeTodo(todo)"></a>
 </div>
 
@@ -13,8 +13,10 @@
 	</div>
   
   <button class="btn btn-primary" type="submit" [disabled]="!myForm.valid">Add Todo</button>
-  <button class="btn btn-warning" *ngIf="todos.length > 1" (click)="completeAll()">Complete All</button>	
 </form>
+
+<input id="toggle-all" type="checkbox" (click)="toggleAll($event)">
+<label for="toggle-all">Mark all as complete</label>
 
 <div *ngIf="!myForm.valid && myForm.dirty" class="bg-warning">Form is invalid</div>
 <div *ngIf="!newTodoControl.valid && newTodoControl.dirty" class="bg-warning">newTodo is invalid</div>

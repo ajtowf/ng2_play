@@ -50,14 +50,15 @@ export class Todo {
             this.buildForm();
             /*this.newTodoText = '';
             this.newTodoControl.updateValue('');
-            this.myForm.dirty = false;   
+            this.myForm.dirty = false;
             this.newTodoControl.dirty = false;*/
         }
     }
 
-    completeAll() {
-        for (var todo of this.todos) {
-            todo.completed = true;
-        }
+    toggleAll($event) {
+        var isComplete = $event.target.checked;
+        this.todos.forEach(function(todo) {
+            todo.completed = isComplete;
+        });
     }
 }
