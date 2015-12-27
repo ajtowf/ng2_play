@@ -18,8 +18,7 @@ gulp.task('ts-lint', function() {
 
 gulp.task('compile-ts', function() {
 	var sourceTsFiles = [
-		config.allTs,
-		config.typings	
+		config.allTs
 	];
 	
 	var tsResult = gulp
@@ -45,7 +44,7 @@ gulp.task('serve', ['ts-lint', 'compile-ts'], function() {
     notify: true,
     reloadDelay: 0,
     server: {
-      baseDir: './app',
+      baseDir: ['./','./node_modules', './app'],
       middleware: superstatic({ debug: false})
     }
 	});

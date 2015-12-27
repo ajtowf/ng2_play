@@ -1,18 +1,18 @@
-<div *ng-for="#todo of todos">
+<div *ngFor="#todo of todos">
 	<input type="checkbox" #chkbox [(checked)]="todo.completed">
 	{{todo.text}}
 	<a class="glyphicon glyphicon-remove" (click)="removeTodo(todo)"></a>
 </div>
 
-<form [ng-form-model]="myForm" (submit)="onSubmit()" class="form-inline">
+<form [ngFormModel]="myForm" (submit)="onSubmit()" class="form-inline">
 	<div class="form-group"
 		[class.has-error]="!newTodo.valid && newTodo.touched">	
-  		<input class="form-control" [ng-form-control]="myForm.controls['newTodo']" placeholder="new todo">
+  		<input class="form-control" [ngFormControl]="myForm.controls['newTodo']" placeholder="new todo">
 	</div>
   
   <button class="btn btn-primary" type="submit" [disabled]="!myForm.valid">Add Todo</button>
-  <button class="btn btn-warning" *ng-if="todos.length > 1" (click)="completeAll()">Complete All</button>	
-</div>
+  <button class="btn btn-warning" *ngIf="todos.length > 1" (click)="completeAll()">Complete All</button>	
+</form>
 
-<div *ng-if="!myForm.valid && newTodo.touched" class="bg-warning">Form is invalid</div>
-<div *ng-if="!newTodo.valid && newTodo.touched" class="bg-warning">newTodo is invalid</div>
+<div *ngIf="!myForm.valid && newTodo.touched" class="bg-warning">Form is invalid</div>
+<div *ngIf="!newTodo.valid && newTodo.touched" class="bg-warning">newTodo is invalid</div>

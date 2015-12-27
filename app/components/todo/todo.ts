@@ -1,8 +1,8 @@
 /// <reference path="../../models.ts"/>
 
-import {Component, View, NgFor, NgIf} from 'angular2/angular2';
-import {FORM_DIRECTIVES, FormBuilder, ControlGroup, Control} from 'angular2/angular2';
-import {Validators} from 'angular2/angular2';
+import {Component, View} from 'angular2/core';
+import {FORM_DIRECTIVES, FormBuilder, ControlGroup, Control} from 'angular2/common';
+import {Validators} from 'angular2/common';
 import {TodoItem} from '../../models';
 
 @Component({
@@ -11,13 +11,13 @@ import {TodoItem} from '../../models';
 })
 @View({
   templateUrl: './components/todo/todo.html',
-  directives: [NgFor, NgIf, FORM_DIRECTIVES]
+  directives: [FORM_DIRECTIVES]
 })
 export class Todo {
   todos: Array<TodoItem>;
 
   myForm: ControlGroup;
-  newTodo: Control;
+  newTodo: any;
 
   constructor(fb: FormBuilder) {
     this.todos = new Array<TodoItem>();

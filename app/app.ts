@@ -1,5 +1,6 @@
-import {Component, View, bootstrap, bind} from 'angular2/angular2';
-import {ROUTER_BINDINGS, RouterOutlet, RouteConfig, RouterLink} from 'angular2/router';
+import {bootstrap} from 'angular2/platform/browser';
+import {Component, View, bind} from 'angular2/core';
+import {ROUTER_PROVIDERS, RouterOutlet, RouteConfig, RouterLink} from 'angular2/router';
 
 import {LocationStrategy, HashLocationStrategy} from 'angular2/router';
 
@@ -14,8 +15,8 @@ import { About } from './components/about/about';
 		<div class="container">
 			<nav>
 				<ul>
-					<li><a [router-link]="['/home']">Todo</a></li>
-					<li><a [router-link]="['/about', {'id': 'Hello world'}]">About</a></li>
+					<li><a [routerLink]="['/Home']">Todo</a></li>
+					<li><a [routerLink]="['/About', {'id': 'Hello world'}]">About</a></li>
 				</ul>
 			</nav>
 			<router-outlet></router-outlet>
@@ -24,14 +25,14 @@ import { About } from './components/about/about';
 	directives: [RouterOutlet, RouterLink]
 })
 @RouteConfig([
-	{ path: '/', component: Todo, as: 'home' },
-	{ path: '/about/:id', component: About, as: 'about' }
+	{ path: '/', component: Todo, as: 'Home' },
+	{ path: '/about/:id', component: About, as: 'About' }
 ])
 class AppComponent {
 
 }
 
 bootstrap(AppComponent, [
-	ROUTER_BINDINGS,
+	ROUTER_PROVIDERS,
 	bind(LocationStrategy).toClass(HashLocationStrategy)
 ]);
