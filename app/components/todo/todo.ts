@@ -7,7 +7,7 @@ import {TodoItem} from '../../models';
 
 @Component({
     selector: 'todo',
-    viewBindings: [FormBuilder]
+    viewProviders: [FormBuilder]
 })
 @View({
     templateUrl: './app/components/todo/todo.html',
@@ -18,8 +18,7 @@ export class Todo {
 
     fb: FormBuilder;
     myForm: ControlGroup;
-    newTodoText: string;
-    newTodoControl: Control;
+    newTodo: Control;
 
     constructor(fb: FormBuilder) {
         this.fb = fb;
@@ -30,10 +29,10 @@ export class Todo {
     }
 
     buildForm(): void {
-        this.newTodoControl = new Control('', Validators.required);
+        this.newTodo = new Control('', Validators.required);
 
         this.myForm = this.fb.group({
-            'newTodo': this.newTodoControl
+            'newTodo': this.newTodo
         });
     }
 
@@ -43,15 +42,11 @@ export class Todo {
 
     onSubmit(): void {
         if (this.myForm.valid) {
-            this.todos.push(new TodoItem(this.newTodoText, false));
+            this.todos.push(new TodoItem(this.newTodo.value, false));
 
             // How in hell do I reset this thing and prevent it from being validated?
             // The only thing that works is rebuilding the whole form/&%¤#""
             this.buildForm();
-            /*this.newTodoText = '';
-            this.newTodoControl.updateValue('');
-            this.myForm.dirty = false;
-            this.newTodoControl.dirty = false;*/
         }
     }
 

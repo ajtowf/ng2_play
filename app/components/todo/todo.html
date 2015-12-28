@@ -5,11 +5,11 @@
 </div>
 
 <form [ngFormModel]="myForm" (submit)="onSubmit()" class="form-inline">
-	<div class="form-group">	
-  		<input class="form-control" placeholder="What do you need to do?"
-          [class.has-error]="!myForm.controls['newTodo'].valid && myForm.controls['newTodo'].dirty"           
-          [ngFormControl]="myForm.controls['newTodo']"
-          [(ngModel)]="newTodoText">
+	<div class="form-group"
+        [class.has-error]="!newTodo.valid && newTodo.dirty"
+        [class.has-success]="newTodo.valid && newTodo.dirty">	
+  		<input class="form-control" placeholder="What do you need to do?"                     
+          [ngFormControl]="newTodo">
 	</div>
   
   <button class="btn btn-primary" type="submit" [disabled]="!myForm.valid">Add Todo</button>
@@ -19,4 +19,4 @@
 <label for="toggle-all">Mark all as complete</label>
 
 <div *ngIf="!myForm.valid && myForm.dirty" class="bg-warning">Form is invalid</div>
-<div *ngIf="!newTodoControl.valid && newTodoControl.dirty" class="bg-warning">newTodo is invalid</div>
+<div *ngIf="!newTodo.valid && newTodo.dirty" class="bg-warning">newTodo is invalid</div>
