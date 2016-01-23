@@ -7,8 +7,7 @@ import {tokenNotExpired} from 'angular2-jwt';
 })
 @View({
 	template: `
-	 Hello {{profile.name}}
-   <img src="{{profile.picture}}">
+	 <img src="{{profile.picture}}" style="width: 50px" /> {{profile.name}}    
 	`
 })
 @CanActivate(() => tokenNotExpired())
