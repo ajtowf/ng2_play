@@ -3,19 +3,16 @@
     <base href="/">
     <title>Angular 2 - ToDo App</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
+    <script src="//cdn.auth0.com/js/lock-8.1.min.js"></script>
     <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
     <script src="node_modules/systemjs/dist/system.src.js"></script>
-    <script src="node_modules/rxjs/bundles/Rx.js"></script>
-    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
-    <script src="node_modules/angular2/bundles/router.dev.js"></script>
     <script>
       System.config({
-        packages: {        
-          app: {
-            format: 'register',
-            defaultExtension: 'js'
-          }
+        defaultJSExtensions: true,
+        map: {
+          "angular2-jwt": "node_modules/angular2-jwt/angular2-jwt",
+          "angular2": "node_modules/angular2",
+          "rxjs": "node_modules/rxjs"
         }
       });
       System.import('app/boot').then(null, console.error.bind(console));
