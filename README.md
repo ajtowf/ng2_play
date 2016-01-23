@@ -26,3 +26,7 @@ Run the following commands to run the application
 ## Upgrade from alpha37 to beta0
 
 - Screencast @ https://youtu.be/1xHMaCzEoUI
+
+## Authentication with Auth0 (signup/login/logout) 
+
+- Screencast @ -
