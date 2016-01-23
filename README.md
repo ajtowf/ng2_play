@@ -27,6 +27,6 @@ Run the following commands to run the application
 
 - Screencast @ https://youtu.be/1xHMaCzEoUI
 
-## Authentication with Auth0 (signup/login/logout) 
+## Authentication with Auth0 in 10 minutes (signup/login/logout) 
 
-- Screencast @ -
+- Screencast @ https://youtu.be/n4gSXwVDkSw
