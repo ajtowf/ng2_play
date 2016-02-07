@@ -30,3 +30,7 @@ Run the following commands to run the application
 ## Authentication with Auth0 in 10 minutes (signup/login/logout) 
 
 - Screencast @ https://youtu.be/n4gSXwVDkSw
+
+## Authorized Requests with JWT Token aginst ExpressJS backend 
+
+- Screencast @ https://youtu.be/fDHihQ5hB5I
