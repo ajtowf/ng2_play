@@ -1,5 +1,7 @@
 ## Angular 2 Play
 
+This repo uses Angular 2 Beta 3.
+
 Run the following commands to run the application
 
     npm install
