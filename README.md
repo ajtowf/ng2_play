@@ -36,3 +36,7 @@ Run the following commands to run the application
 ## Authorized Requests with JWT Token aginst ExpressJS backend 
 
 - Screencast @ https://youtu.be/fDHihQ5hB5I
+
+## Lifecycle Hooks 
+
+- Screencast @ https://youtu.be/bY92HFyaBvo

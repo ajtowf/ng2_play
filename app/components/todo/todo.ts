@@ -1,6 +1,6 @@
 /// <reference path="../../models.ts"/>
 
-import {Component, View} from 'angular2/core';
+import {Component, View, OnInit} from 'angular2/core';
 import {FORM_DIRECTIVES, FormBuilder, ControlGroup, Control, AbstractControl} from 'angular2/common';
 import {Validators} from 'angular2/common';
 import {TodoItem} from '../../models';
@@ -13,7 +13,7 @@ import {TodoItem} from '../../models';
     templateUrl: './app/components/todo/todo.html',
     directives: [FORM_DIRECTIVES]
 })
-export class Todo {
+export class Todo implements OnInit {
     todos: Array<TodoItem>;
 
     fb: FormBuilder;
@@ -26,6 +26,10 @@ export class Todo {
         this.todos.push(new TodoItem('Hello world', false));
 
         this.buildForm();
+    }
+
+    ngOnInit() : void {
+      console.log('ngOnInit() called');
     }
 
     buildForm(): void {

@@ -1,4 +1,4 @@
-import {Component, View} from 'angular2/core';
+import {Component, View, OnInit, OnDestroy, AfterContentInit} from 'angular2/core';
 import {CanActivate} from 'angular2/router';
 import {tokenNotExpired} from 'angular2-jwt';
 import {AuthHttp} from 'angular2-jwt';
@@ -14,13 +14,25 @@ import {AuthHttp} from 'angular2-jwt';
 	`
 })
 @CanActivate(() => tokenNotExpired())
-export class Profile {
+export class Profile implements OnInit, OnDestroy, AfterContentInit {
   profile: any;
   quote: any;
 
   constructor(public authHttp: AuthHttp) {
+  }
+
+  ngOnInit(): void {
+    console.log('ngOnInit() called');
     this.profile = JSON.parse(localStorage.getItem('profile'));
     this.getSecretThing();
+  }
+
+  ngOnDestroy() : void {
+    console.log('ngOnDestroy() called');
+  }
+
+  ngAfterContentInit() {
+    console.log('ngAfterContentInit() called');
   }
 
   getSecretThing() {
