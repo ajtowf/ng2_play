@@ -5,13 +5,17 @@ import {FORM_DIRECTIVES, FormBuilder, ControlGroup, Control, AbstractControl} fr
 import {Validators} from 'angular2/common';
 import {TodoItem} from '../../models';
 
+import { MdButton } from '@angular2-material/button';
+import { MdCheckbox } from '@angular2-material/checkbox';
+import { MdSpinner, MdProgressCircle } from '@angular2-material/progress-circle';
+
 @Component({
     selector: 'todo',
     viewProviders: [FormBuilder]
 })
 @View({
     templateUrl: './app/components/todo/todo.html',
-    directives: [FORM_DIRECTIVES]
+    directives: [FORM_DIRECTIVES, MdButton, MdCheckbox, MdSpinner, MdProgressCircle]
 })
 export class Todo implements OnInit {
     todos: Array<TodoItem>;

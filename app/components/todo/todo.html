@@ -1,6 +1,8 @@
-<div *ngFor="#todo of todos; #i=index">
-	<input id="{{i}}" type="checkbox" [(checked)]="todo.completed">
-	<label [attr.for]="i">{{todo.text}}</label>
+<div *ngFor="#todo of todos">
+  <md-checkbox [checked]="todo.completed"
+                 (change)="todo.completed = $event">
+      {{todo.text}}
+  </md-checkbox>
 	<a class="glyphicon glyphicon-remove" (click)="removeTodo(todo)"></a>
 </div>
 
@@ -12,7 +14,7 @@
           [ngFormControl]="newTodo">
 	</div>
   
-  <button class="btn btn-primary" type="submit" [disabled]="!myForm.valid">Add Todo</button>
+  <button md-raised-button color="primary" type="submit" [disabled]="!myForm.valid">Add Todo</button>
 </form>
 
 <input id="toggle-all" type="checkbox" (click)="toggleAll($event)">
@@ -20,3 +22,11 @@
 
 <div *ngIf="!myForm.valid && myForm.dirty" class="bg-warning">Form is invalid</div>
 <div *ngIf="!newTodo.valid && newTodo.dirty" class="bg-warning">newTodo is invalid</div>
+
+<!--<md-progress-circle mode="determinate" value="79"></md-progress-circle>
+<md-progress-circle mode="indeterminate"></md-progress-circle>
+<md-spinner></md-spinner>
+
+<md-progress-circle mode="indeterminate" color="primary"></md-progress-circle>
+<md-progress-circle mode="indeterminate" color="accent"></md-progress-circle>
+<md-progress-circle mode="indeterminate" color="warn"></md-progress-circle>-->
