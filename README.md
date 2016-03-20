@@ -40,3 +40,7 @@ Run the following commands to run the application
 ## Lifecycle Hooks 
 
 - Screencast @ https://youtu.be/bY92HFyaBvo
+
+## Angular2 Material First Look
+
+- Screencast @ https://youtu.be/ngkVXUCBozc
