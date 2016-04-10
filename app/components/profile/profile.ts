@@ -36,7 +36,7 @@ export class Profile implements OnInit, OnDestroy, AfterContentInit {
   }
 
   getSecretThing() {
-    this.authHttp.get('http://localhost:3001/api/quote')
+    this.authHttp.get('http://localhost:3002/api/quote')
       .subscribe(
         data => {
           console.log(data.json());
