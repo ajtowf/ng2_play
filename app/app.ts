@@ -1,5 +1,5 @@
 
-import {Component, View, bind} from 'angular2/core';
+import {Component, bind} from 'angular2/core';
 import {ROUTER_PROVIDERS, RouterOutlet, RouteConfig, RouterLink, Location} from 'angular2/router';
 import {tokenNotExpired, JwtHelper} from 'angular2-jwt';
 import {LocationStrategy, HashLocationStrategy} from 'angular2/router';
@@ -14,8 +14,8 @@ declare var Auth0Lock;
 
 @Component({
 	selector: 'my-app',
-    templateUrl: './app/app.html',
-    styleUrls: ['./app/app.css'],
+  templateUrl: './app/app.html',
+  styleUrls: ['./app/app.css'],
 	directives: [RouterOutlet, RouterLink, MdToolbar]
 })
 @RouteConfig([

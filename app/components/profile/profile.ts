@@ -1,13 +1,11 @@
-import {Component, View, OnInit, OnDestroy, AfterContentInit} from 'angular2/core';
+import {Component, OnInit, OnDestroy, AfterContentInit} from 'angular2/core';
 import {CanActivate} from 'angular2/router';
 import {tokenNotExpired} from 'angular2-jwt';
 import {AuthHttp} from 'angular2-jwt';
 
 @Component({
-	selector: 'profile'
-})
-@View({
-	template: `
+	selector: 'profile',
+  template: `
 	 <img src="{{profile.picture}}" style="width: 50px" /> {{profile.name}}    
    <h2>Chuck quote of the day</h2>
    {{quote}}
