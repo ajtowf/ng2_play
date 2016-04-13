@@ -8,14 +8,15 @@ import { Todo } from './components/todo/todo';
 import { About } from './components/about/about';
 import { Profile } from './components/profile/profile';
 
+import {MdToolbar} from '@angular2-material/toolbar';
+
 declare var Auth0Lock;
 
 @Component({
-	selector: 'my-app'
-})
-@View({
-	templateUrl: './app/app.html',
-	directives: [RouterOutlet, RouterLink]
+	selector: 'my-app',
+    templateUrl: './app/app.html',
+    styleUrls: ['./app/app.css'],
+	directives: [RouterOutlet, RouterLink, MdToolbar]
 })
 @RouteConfig([
 	{ path: '/', component: Todo, as: 'Home' },

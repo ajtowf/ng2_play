@@ -2,7 +2,9 @@
   <head>
     <base href="/">
     <title>Angular 2 - ToDo App</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="//cdn.auth0.com/js/lock-8.1.min.js"></script>
     <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
     <script src="node_modules/systemjs/dist/system.src.js"></script>
@@ -13,10 +15,13 @@
           "angular2-jwt": "node_modules/angular2-jwt/angular2-jwt",
           "angular2": "node_modules/angular2",
           "rxjs": "node_modules/rxjs",
-          '@angular2-material/core': 'node_modules/@angular2-material/core/core',
+          '@angular2-material/core': 'node_modules/@angular2-material/core',
           '@angular2-material/checkbox': 'node_modules/@angular2-material/checkbox/checkbox',
           '@angular2-material/button': 'node_modules/@angular2-material/button/button',
-          '@angular2-material/progress-circle': 'node_modules/@angular2-material/progress-circle/progress-circle'
+          '@angular2-material/progress-circle': 'node_modules/@angular2-material/progress-circle/progress-circle',
+          '@angular2-material/card': 'node_modules/@angular2-material/card/card',
+          '@angular2-material/input': 'node_modules/@angular2-material/input/input',
+          '@angular2-material/toolbar': 'node_modules/@angular2-material/toolbar/toolbar',
         }
       });
       System.import('app/boot').then(null, console.error.bind(console));

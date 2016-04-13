@@ -25,10 +25,13 @@
     "superstatic": "^1.2.3"
   },
   "dependencies": {
-    "@angular2-material/button": "^2.0.0-alpha.1",
-    "@angular2-material/checkbox": "^2.0.0-alpha.1",
-    "@angular2-material/core": "^2.0.0-alpha.1",
-    "@angular2-material/progress-circle": "^2.0.0-alpha.1",
+    "@angular2-material/button": "^2.0.0-alpha.2",
+    "@angular2-material/checkbox": "^2.0.0-alpha.2",
+    "@angular2-material/core": "^2.0.0-alpha.2",
+    "@angular2-material/progress-circle": "^2.0.0-alpha.2",
+    "@angular2-material/toolbar": "^2.0.0-alpha.2",
+    "@angular2-material/input": "^2.0.0-alpha.2",
+    "@angular2-material/card": "^2.0.0-alpha.2",
     "angular2": "2.0.0-beta.9",
     "angular2-jwt": "0.1.8",
     "cors": "2.7.1",

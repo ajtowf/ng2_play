@@ -1,27 +1,31 @@
-<div *ngFor="#todo of todos">
-  <md-checkbox [checked]="todo.completed"
-                 (change)="todo.completed = $event">
-      {{todo.text}}
-  </md-checkbox>
-	<a class="glyphicon glyphicon-remove" (click)="removeTodo(todo)"></a>
-</div>
+<md-card>
+  <md-card-content>
+    <div *ngFor="#todo of todos">
+      <md-checkbox [(checked)]="todo.completed">
+        {{todo.text}}
+      </md-checkbox>
+      <button md-button (click)="removeTodo(todo)">
+        <i class="material-icons">ic_delete_forever</i>
+      </button>
+    </div>
 
-<form [ngFormModel]="myForm" (submit)="onSubmit()" class="form-inline">
-	<div class="form-group"
-        [class.has-error]="!newTodo.valid && newTodo.dirty"
-        [class.has-success]="newTodo.valid && newTodo.dirty">	
-  		<input class="form-control" placeholder="What do you need to do?"                     
-          [ngFormControl]="newTodo">
-	</div>
-  
-  <button md-raised-button color="primary" type="submit" [disabled]="!myForm.valid">Add Todo</button>
-</form>
+    <form [ngFormModel]="myForm" (submit)="onSubmit()">
+      <div>
+        <md-input required placeholder="What do you need to do?" [ngFormControl]="newTodo"></md-input>
+      </div>
 
-<input id="toggle-all" type="checkbox" (click)="toggleAll($event)">
-<label for="toggle-all">Mark all as complete</label>
+      <button md-raised-button color="primary" type="submit" [disabled]="!myForm.valid">Add Todo</button>
+    </form>
 
-<div *ngIf="!myForm.valid && myForm.dirty" class="bg-warning">Form is invalid</div>
-<div *ngIf="!newTodo.valid && newTodo.dirty" class="bg-warning">newTodo is invalid</div>
+    <md-checkbox (change)="toggleAll($event)">
+      Mark all as complete
+    </md-checkbox>
+
+  </md-card-content>
+</md-card>
+
+<!--<div *ngIf="!myForm.valid && myForm.dirty">Form is invalid</div>
+<div *ngIf="!newTodo.valid && newTodo.dirty">newTodo is invalid</div>-->
 
 <!--<md-progress-circle mode="determinate" value="79"></md-progress-circle>
 <md-progress-circle mode="indeterminate"></md-progress-circle>

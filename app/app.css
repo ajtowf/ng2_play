@@ -1,0 +1,13 @@
+.demo-toolbar {
+  padding: 6px;
+}
+
+.demo-toolbar-icon {
+  padding: 6px;
+  padding: 0 14px 0 14px;
+}
+
+.demo-fill-remaining {
+  padding: 6px;
+  flex: 1 1 auto;
+}
