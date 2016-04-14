@@ -7,40 +7,46 @@ Run the following commands to run the application
     npm install
     gulp
 
-## First look - Created Todo App
+# Screencasts
 
-- Blog @ http://www.towfeek.se/2015/07/angularjs-2-overview/
-- Screencast @ https://youtu.be/rd3cLh_wn04
+## 2016-04-14 Replacing Bootstrap with Material2
 
-## Forms - Extended app with validation
+- https://youtu.be/9w7NLvJTCcU
 
-- Blog @ http://www.towfeek.se/2015/08/angularjs-2-0-forms-validation/
-- Screencast @ https://youtu.be/267ClmzfzvI
+## 2016-03-20 Angular2 Material First Look
 
-## Routing — Everything you need to know in 13 minutes
+- https://youtu.be/ngkVXUCBozc
 
-- Screencast @ https://youtu.be/ZsGRiHSaOxM
+## 2016-03-13 Lifecycle Hooks 
 
-## Build automation with Gulp
+- https://youtu.be/bY92HFyaBvo
 
-- Screencast @ https://youtu.be/7xOubdqyqaY
+## 2016-02-07 Auth and JWT Tokens with ExpressJS 
 
-## Upgrade from alpha37 to beta0
+- https://youtu.be/fDHihQ5hB5I
 
-- Screencast @ https://youtu.be/1xHMaCzEoUI
+## 2016-01-23 Auth0 in 10 minutes (signup/login/logout) 
 
-## Authentication with Auth0 in 10 minutes (signup/login/logout) 
+- https://youtu.be/n4gSXwVDkSw
 
-- Screencast @ https://youtu.be/n4gSXwVDkSw
+## 2015-12-27 Upgrade from alpha37 to beta0
 
-## Authorized Requests with JWT Token aginst ExpressJS backend 
+- https://youtu.be/1xHMaCzEoUI
 
-- Screencast @ https://youtu.be/fDHihQ5hB5I
+## 2015-09-11 Build automation with Gulp
 
-## Lifecycle Hooks 
+- https://youtu.be/7xOubdqyqaY
 
-- Screencast @ https://youtu.be/bY92HFyaBvo
+## 2015-09-03 Routing — Everything you need to know in 13 minutes
 
-## Angular2 Material First Look
+- https://youtu.be/ZsGRiHSaOxM
 
-- Screencast @ https://youtu.be/ngkVXUCBozc
+## 2015-08-14 Forms - Extended app with validation
+
+- http://www.towfeek.se/2015/08/angularjs-2-0-forms-validation/
+- https://youtu.be/267ClmzfzvI
+
+## 2015-07-07 First look - Created Todo App
+
+- http://www.towfeek.se/2015/07/angularjs-2-overview/
+- https://youtu.be/rd3cLh_wn04
