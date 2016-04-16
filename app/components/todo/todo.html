@@ -4,8 +4,8 @@
       <md-checkbox [(checked)]="todo.completed">
         {{todo.text}}
       </md-checkbox>
-      <button md-button (click)="removeTodo(todo)">
-        <i class="material-icons">ic_delete_forever</i>
+      <button md-icon-button color="warn" (click)="removeTodo(todo)">
+        <i class="material-icons" md-24>check</i>
       </button>
     </div>
 
