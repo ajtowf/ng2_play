@@ -1,36 +1,27 @@
 <html>
-  <head>
-    <base href="/">
-    <title>Angular 2 - ToDo App</title>
-    <link rel="stylesheet" href="main.css">    
 
-    <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="//cdn.auth0.com/js/lock-8.1.min.js"></script>
-    
-    <script src="node_modules/es6-shim/es6-shim.js"></script>
-    <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
-    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
-    <script src="node_modules/systemjs/dist/system.src.js"></script>
-    <script>
-      System.config({
-        defaultJSExtensions: true,
-        map: {
-          "angular2-jwt": "node_modules/angular2-jwt/angular2-jwt",
-          "angular2": "node_modules/angular2",
-          "rxjs": "node_modules/rxjs",
-          '@angular2-material/core': 'node_modules/@angular2-material/core',
-          '@angular2-material/checkbox': 'node_modules/@angular2-material/checkbox/checkbox',
-          '@angular2-material/button': 'node_modules/@angular2-material/button/button',
-          '@angular2-material/progress-circle': 'node_modules/@angular2-material/progress-circle/progress-circle',
-          '@angular2-material/card': 'node_modules/@angular2-material/card/card',
-          '@angular2-material/input': 'node_modules/@angular2-material/input/input',
-          '@angular2-material/toolbar': 'node_modules/@angular2-material/toolbar/toolbar',
-        }
-      });
-      System.import('app/boot').then(null, console.error.bind(console));
-    </script>
-  </head>
-  <body>
-    <my-app>Loading...</my-app>
-  </body>
+<head>
+  <base href="/">
+  <title>Angular 2 - ToDo App</title>
+  <link rel="stylesheet" href="main.css">
+
+  <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="//cdn.auth0.com/js/lock-8.1.min.js"></script>
+
+  <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+
+  <script src="node_modules/zone.js/dist/zone.js"></script>
+  <script src="node_modules/reflect-metadata/Reflect.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+  <script src="systemjs.config.js"></script>
+  <script>
+    System.import('app').catch(function(err){ console.error(err); });
+  </script> 
+</head>
+
+<body>
+  <my-app>Loading...</my-app>
+</body>
+
 </html>

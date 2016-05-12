@@ -1,8 +1,9 @@
 
-import {Component, bind} from 'angular2/core';
-import {ROUTER_PROVIDERS, RouterOutlet, RouteConfig, RouterLink, Location} from 'angular2/router';
+import {Component, bind} from '@angular/core';
+import {ROUTER_PROVIDERS, ROUTER_DIRECTIVES, Routes, Router} from '@angular/router';
+import {Location} from '@angular/common';
 import {tokenNotExpired, JwtHelper} from 'angular2-jwt';
-import {LocationStrategy, HashLocationStrategy} from 'angular2/router';
+import {LocationStrategy, HashLocationStrategy} from '@angular/common';
 
 import { Todo } from './components/todo/todo';
 import { About } from './components/about/about';
@@ -16,12 +17,12 @@ declare var Auth0Lock;
 	selector: 'my-app',
   templateUrl: './app/app.html',
   styleUrls: ['./app/app.css'],
-	directives: [RouterOutlet, RouterLink, MdToolbar]
+	directives: [ROUTER_DIRECTIVES, MdToolbar]
 })
-@RouteConfig([
-	{ path: '/', component: Todo, as: 'Home' },
-	{ path: '/about/:id', component: About, as: 'About' },
-  { path: '/profile', component: Profile, as: 'Profile' }
+@Routes([
+	{ path: '/', component: Todo },
+	{ path: '/about/:id', component: About },
+  { path: '/profile', component: Profile}
 ])
 export class AppComponent {
     lock = new Auth0Lock('T1wdQrDposGW5BisaKViC0Cu9CuxtR0c', 'towfeek.eu.auth0.com');

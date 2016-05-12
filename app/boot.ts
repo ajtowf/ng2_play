@@ -1,11 +1,12 @@
-///<reference path="../node_modules/angular2/typings/browser.d.ts"/>
+/// <reference path="../typings/browser/ambient/es6-shim/index.d.ts" />
 
-import {bootstrap} from 'angular2/platform/browser';
-import {bind, provide} from 'angular2/core';
-import {ROUTER_PROVIDERS, LocationStrategy, HashLocationStrategy} from 'angular2/router';
+import {bootstrap} from '@angular/platform-browser-dynamic';
+import {bind, provide} from '@angular/core';
+import {ROUTER_PROVIDERS } from '@angular/router';
+import { LocationStrategy, HashLocationStrategy} from '@angular/common';
 import {AppComponent} from './app';
 
-import {HTTP_PROVIDERS, Http} from 'angular2/http';
+import {HTTP_PROVIDERS, Http} from '@angular/http';
 import {AuthHttp, AuthConfig} from 'angular2-jwt';
 
 bootstrap(AppComponent, [

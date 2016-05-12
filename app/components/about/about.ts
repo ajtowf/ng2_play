@@ -1,5 +1,5 @@
-import {Component} from 'angular2/core';
-import {RouteParams} from 'angular2/router';
+import {Component} from '@angular/core';
+import { Router, RouteSegment, RouteTree, OnActivate } from '@angular/router';
 
 @Component({
 	selector: 'about',
@@ -7,9 +7,17 @@ import {RouteParams} from 'angular2/router';
 		Welcome to the about page! This is the ID: {{id}}
 	`
 })
-export class About {
+export class About implements OnActivate {
 	id: string;
-	constructor(params: RouteParams) {
-		this.id = params.get('id');
+
+	constructor(private router: Router) {
+	}
+
+	routerOnActivate(
+      current: RouteSegment,
+      prev?: RouteSegment,
+      currTree?: RouteTree,
+      prevTree?: RouteTree) {
+		this.id = current.getParam('id');
 	}
 }
