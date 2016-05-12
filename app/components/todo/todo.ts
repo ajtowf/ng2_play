@@ -1,7 +1,7 @@
 /// <reference path="../../models.ts"/>
 
 import {Component, OnInit} from '@angular/core';
-import {CORE_DIRECTIVES, FORM_DIRECTIVES, FormBuilder, ControlGroup, Control, AbstractControl} from '@angular/common';
+import {FORM_DIRECTIVES, FormBuilder, ControlGroup, Control, AbstractControl} from '@angular/common';
 import {Validators} from '@angular/common';
 import {TodoItem} from '../../models';
 
@@ -16,7 +16,6 @@ import { MdSpinner, MdProgressCircle } from '@angular2-material/progress-circle'
   viewProviders: [FormBuilder],
   templateUrl: './app/components/todo/todo.html',
   directives: [
-    CORE_DIRECTIVES,
     FORM_DIRECTIVES,
     MdButton,
     MdCheckbox,
