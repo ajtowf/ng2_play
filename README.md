@@ -2,6 +2,8 @@
 
 This repo uses Angular 2 RC1 with Material 2 Alpha 4.
 
+<img src="screenshots/readme-screen.jpg" border="0" />
+
 Run the following commands to run the application
 
     npm install
