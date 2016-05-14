@@ -1,5 +1,4 @@
-
-import {Component, bind} from '@angular/core';
+import {Component, bind, NgZone} from '@angular/core';
 import {ROUTER_PROVIDERS, ROUTER_DIRECTIVES, Routes, Router} from '@angular/router';
 import {Location} from '@angular/common';
 import {tokenNotExpired, JwtHelper} from 'angular2-jwt';
@@ -28,8 +27,13 @@ export class AppComponent {
     lock = new Auth0Lock('T1wdQrDposGW5BisaKViC0Cu9CuxtR0c', 'towfeek.eu.auth0.com');
     jwtHelper: JwtHelper = new JwtHelper();
     location: Location;
-    constructor(location: Location) {
+    ngZone: NgZone;
+
+    constructor(
+      location: Location,
+      ngZone: NgZone) {
         this.location = location;
+        this.ngZone = ngZone;
     }
 
     login() {
@@ -48,7 +52,7 @@ export class AppComponent {
           this.jwtHelper.isTokenExpired(id_token)
         );
 
-        self.loggedIn();
+        this.ngZone.run(() => self.loggedIn());
       });
     }
 
