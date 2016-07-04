@@ -1,8 +1,8 @@
 /// <reference path="../../models.ts"/>
 
 import {Component, OnInit} from '@angular/core';
-import {FORM_DIRECTIVES, FormBuilder, ControlGroup, Control, AbstractControl} from '@angular/common';
-import {Validators} from '@angular/common';
+import {FORM_DIRECTIVES, REACTIVE_FORM_DIRECTIVES, FormBuilder, FormGroup, FormControl, AbstractControl} from '@angular/forms';
+import {Validators} from '@angular/forms';
 import {TodoItem} from '../../models';
 
 import { MdCard } from '@angular2-material/card';
@@ -17,6 +17,7 @@ import { MdSpinner, MdProgressCircle } from '@angular2-material/progress-circle'
   templateUrl: './app/components/todo/todo.html',
   directives: [
     FORM_DIRECTIVES,
+    REACTIVE_FORM_DIRECTIVES,
     MdButton,
     MdCheckbox,
     MdSpinner,
@@ -28,8 +29,8 @@ export class Todo implements OnInit {
   todos: Array<TodoItem>;
 
   fb: FormBuilder;
-  myForm: ControlGroup;
-  newTodo: Control;
+  myForm: FormGroup;
+  newTodo: FormControl;
 
   constructor(fb: FormBuilder) {
     this.fb = fb;
@@ -44,7 +45,7 @@ export class Todo implements OnInit {
   }
 
   buildForm(): void {
-    this.newTodo = new Control('', Validators.required);
+    this.newTodo = new FormControl('', Validators.required);
 
     this.myForm = this.fb.group({
       'newTodo': this.newTodo

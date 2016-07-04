@@ -9,13 +9,13 @@
       </button>
     </div>
 
-    <!--<form [ngFormModel]="myForm" (submit)="onSubmit()">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
       <div>
-        <md-input required placeholder="What do you need to do?" [ngFormControl]="newTodo"></md-input>
+        <md-input required placeholder="What do you need to do?" [formControl]="newTodo"></md-input>
       </div>
 
       <button md-raised-button color="primary" type="submit" [disabled]="!myForm.valid">Add Todo</button>
-    </form>-->
+    </form>
 
     <md-checkbox (change)="toggleAll($event)">
       Mark all as complete
