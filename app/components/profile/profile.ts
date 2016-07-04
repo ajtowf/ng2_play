@@ -1,5 +1,4 @@
 import {Component, OnInit, OnDestroy, AfterContentInit} from '@angular/core';
-//  import {CanActivate} from '@angular/router';
 import {tokenNotExpired} from 'angular2-jwt';
 import {AuthHttp} from 'angular2-jwt';
 
@@ -11,7 +10,6 @@ import {AuthHttp} from 'angular2-jwt';
    {{quote}}
 	`
 })
-// @CanActivate(() => tokenNotExpired())
 export class Profile implements OnInit, OnDestroy, AfterContentInit {
   profile: any;
   quote: any;

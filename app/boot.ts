@@ -2,19 +2,21 @@
 
 import {bootstrap} from '@angular/platform-browser-dynamic';
 import {bind, provide} from '@angular/core';
-import {ROUTER_PROVIDERS } from '@angular/router';
 import { LocationStrategy, HashLocationStrategy} from '@angular/common';
 import {AppComponent} from './app';
 
+import {APP_ROUTER_PROVIDER} from './routes';
 import {HTTP_PROVIDERS, Http} from '@angular/http';
 import {AuthHttp, AuthConfig} from 'angular2-jwt';
+import {AuthGuard} from './auth-guard';
 
 bootstrap(AppComponent, [
   HTTP_PROVIDERS,
-	ROUTER_PROVIDERS,
+	APP_ROUTER_PROVIDER,
 	bind(LocationStrategy).toClass(HashLocationStrategy),
   provide(AuthConfig, { useFactory: () => {
     return new AuthConfig();
   }}),
-  AuthHttp
+  AuthHttp,
+  AuthGuard
 ]);
