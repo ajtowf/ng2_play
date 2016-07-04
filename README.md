@@ -1,6 +1,6 @@
 ## Angular 2 Play
 
-This repo uses Angular 2 RC1 with Material 2 Alpha 4.
+This repo uses Angular 2 RC3 with Material 2 Alpha 6 and the new 3.0 Router.
 
 <img src="screenshots/readme-screen.png" border="0" />
 
@@ -11,6 +11,10 @@ Run the following commands to run the application
     gulp
 
 # Screencasts
+
+## 2016-07-04 Upgrading to 3.0 Router and Guarding Routes
+
+- *In editing* #staytuned 
 
 ## 2016-04-14 Replacing Bootstrap with Material2
 
