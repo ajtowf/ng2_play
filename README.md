@@ -6,15 +6,14 @@ This repo uses Angular 2 RC3 with Material 2 Alpha 6 and the new 3.0 Router.
 
 Run the following commands to run the application
 
-    npm install
-    typings install
+    npm install    
     gulp
 
 # Screencasts
 
-## 2016-07-04 Upgrading to 3.0 Router and Guarding Routes
+## 2016-07-05 Upgrading to 3.0 Router and Guarding Routes
 
-- *In editing* #staytuned 
+- https://youtu.be/w1PFJT_FfSY
 
 ## 2016-04-14 Replacing Bootstrap with Material2
 
