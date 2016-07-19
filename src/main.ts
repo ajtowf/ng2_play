@@ -6,6 +6,7 @@ import {AppComponent, environment} from './app';
 import {provideForms, disableDeprecatedForms} from '@angular/forms';
 
 import {APP_ROUTER_PROVIDER, AuthGuard} from './app';
+import {DataService} from './app/shared';
 import {HTTP_PROVIDERS, Http} from '@angular/http';
 import {AuthHttp, AuthConfig} from 'angular2-jwt';
 import { bootstrap } from '@angular/platform-browser-dynamic';
@@ -24,5 +25,6 @@ bootstrap(AppComponent, [
     return new AuthConfig();
   }}),
   AuthHttp,
-  AuthGuard
+  AuthGuard,
+  DataService
 ]);

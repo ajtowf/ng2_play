@@ -1,9 +1,8 @@
 import {Component, OnInit, OnDestroy, AfterContentInit} from '@angular/core';
-import {tokenNotExpired} from 'angular2-jwt';
-import {AuthHttp} from 'angular2-jwt';
+import { DataService } from '../shared';
 
 @Component({
-	selector: 'profile',
+  selector: 'profile',
   template: `
 	 <img src="{{profile.picture}}" style="width: 50px" /> {{profile.name}}    
    <h2>Chuck quote of the day</h2>
@@ -14,32 +13,25 @@ export class Profile implements OnInit, OnDestroy, AfterContentInit {
   profile: any;
   quote: any;
 
-  constructor(public authHttp: AuthHttp) {
+  constructor(private dataService: DataService) {
   }
 
   ngOnInit(): void {
     console.log('ngOnInit() called');
     this.profile = JSON.parse(localStorage.getItem('profile'));
-    this.getSecretThing();
+    this.dataService
+      .getSecretQuote()
+      .subscribe(
+        data => this.quote = data,
+        err => this.quote = "No connection to backend..."
+      );
   }
 
-  ngOnDestroy() : void {
+  ngOnDestroy(): void {
     console.log('ngOnDestroy() called');
   }
 
   ngAfterContentInit() {
     console.log('ngAfterContentInit() called');
-  }
-
-  getSecretThing() {
-    this.authHttp.get('http://localhost:3002/api/quote')
-      .subscribe(
-        data => {
-          console.log(data.json());
-          this.quote = data.json();
-        },
-        err => console.log(err),
-        () => console.log('Complete')
-      );
   }
 }
