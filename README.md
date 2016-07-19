@@ -8,9 +8,19 @@ This repo uses Angular 2 RC3 with Material 2 Alpha 6 and the new 3.0 Router and 
 
 Run the following commands to run the application
 
+    // Install angular-cli and typings once globally
     npm -g install angular-cli
     npm -g install typings
+
+    // To run the frontend
+    git clone https://github.com/ajtowf/ng2_play.git
+    cd ng2_play
+    npm install
     ng serve
+
+    // To run the backend
+    cd ng2_play\backend
+    node app.js
 
 # Screencasts
 
