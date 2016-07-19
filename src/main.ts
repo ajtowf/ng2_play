@@ -1,16 +1,18 @@
-/// <reference path="../typings/browser/ambient/es6-shim/index.d.ts" />
-
-import {bootstrap} from '@angular/platform-browser-dynamic';
+import { enableProdMode } from '@angular/core';
 import {bind, provide} from '@angular/core';
 import { LocationStrategy, HashLocationStrategy} from '@angular/common';
-import {AppComponent} from './app';
+import {AppComponent, environment} from './app';
 
 import {provideForms, disableDeprecatedForms} from '@angular/forms';
 
-import {APP_ROUTER_PROVIDER} from './routes';
+import {APP_ROUTER_PROVIDER, AuthGuard} from './app';
 import {HTTP_PROVIDERS, Http} from '@angular/http';
 import {AuthHttp, AuthConfig} from 'angular2-jwt';
-import {AuthGuard} from './auth-guard';
+import { bootstrap } from '@angular/platform-browser-dynamic';
+
+if (environment.production) {
+  enableProdMode();
+}
 
 bootstrap(AppComponent, [
   disableDeprecatedForms(),

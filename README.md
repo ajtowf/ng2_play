@@ -1,13 +1,14 @@
 ## Angular 2 Play
 
-This repo uses Angular 2 RC3 with Material 2 Alpha 6 and the new 3.0 Router.
+This repo uses Angular 2 RC3 with Material 2 Alpha 6 and the new 3.0 Router and leverages [Angular CLI](https://github.com/angular/angular-cli).
 
 <img src="screenshots/readme-screen.png" border="0" />
 
 Run the following commands to run the application
 
-    npm install    
-    gulp
+    npm -g install angular-cli
+    npm -g install typings
+    ng serve
 
 # Screencasts
 

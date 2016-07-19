@@ -9,7 +9,7 @@ import {MdToolbar} from '@angular2-material/toolbar';
 declare var Auth0Lock;
 
 @Component({
-	selector: 'my-app',
+	selector: 'app-root',
   templateUrl: './app/app.html',
   styleUrls: ['./app/app.css'],
 	directives: [ROUTER_DIRECTIVES, MdToolbar]
