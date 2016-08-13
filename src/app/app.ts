@@ -1,18 +1,14 @@
 import {Component, bind, NgZone} from '@angular/core';
-import {ROUTER_DIRECTIVES} from '@angular/router';
 import {Location} from '@angular/common';
 import {tokenNotExpired, JwtHelper} from 'angular2-jwt';
 import {LocationStrategy, HashLocationStrategy} from '@angular/common';
-
-import {MdToolbar} from '@angular2-material/toolbar';
 
 declare var Auth0Lock;
 
 @Component({
 	selector: 'app-root',
   templateUrl: './app/app.html',
-  styleUrls: ['./app/app.css'],
-	directives: [ROUTER_DIRECTIVES, MdToolbar]
+  styleUrls: ['./app/app.css']
 })
 export class AppComponent {
     lock = new Auth0Lock('T1wdQrDposGW5BisaKViC0Cu9CuxtR0c', 'towfeek.eu.auth0.com');
