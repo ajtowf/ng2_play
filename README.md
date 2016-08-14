@@ -2,7 +2,7 @@
 
 LIVE DEMO: [https://ng2play.azurewebsites.net](https://ng2play.azurewebsites.net)
 
-This repo uses Angular 2 RC3 with Material 2 Alpha 6 and the new 3.0 Router and leverages [Angular CLI](https://github.com/angular/angular-cli).
+This repo uses Angular 2 RC5 with Material 2 Alpha 7 and the 3.0 RC1 Router and leverages [Angular CLI](https://github.com/angular/angular-cli).
 
 <img src="screenshots/readme-screen.png" border="0" />
 
@@ -23,6 +23,10 @@ Run the following commands to run the application
     node app.js
 
 # Screencasts
+
+## 2016-08-12 Upgrade to RC5 - NgModules and Forms
+
+- https://youtu.be/cxkXHZrcvKY
 
 ## 2016-07-05 Upgrading to 3.0 Router and Guarding Routes
 
