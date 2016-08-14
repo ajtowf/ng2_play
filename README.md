@@ -24,7 +24,7 @@ Run the following commands to run the application
 
 # Screencasts
 
-## 2016-08-12 Upgrade to RC5 - NgModules and Forms
+## 2016-08-15 Upgrade to RC5 - NgModules and Forms
 
 - https://youtu.be/cxkXHZrcvKY
 
