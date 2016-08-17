@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {REACTIVE_FORM_DIRECTIVES, FormBuilder, FormGroup, FormControl, AbstractControl} from '@angular/forms';
+import {FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import {Validators} from '@angular/forms';
 import {TodoItem} from '../shared';
 
@@ -8,10 +8,7 @@ import { MdCheckboxChange } from '@angular2-material/checkbox';
 @Component({
   selector: 'todo',
   viewProviders: [FormBuilder],
-  templateUrl: './app/todo/todo.html',
-  directives: [
-    REACTIVE_FORM_DIRECTIVES,
-  ]
+  templateUrl: './app/todo/todo.html'
 })
 export class Todo implements OnInit {
   todos: Array<TodoItem>;

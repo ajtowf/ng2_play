@@ -1,7 +1,6 @@
-import {Component, bind, NgZone} from '@angular/core';
+import {Component, NgZone} from '@angular/core';
 import {Location} from '@angular/common';
 import {tokenNotExpired, JwtHelper} from 'angular2-jwt';
-import {LocationStrategy, HashLocationStrategy} from '@angular/common';
 
 declare var Auth0Lock;
 
