@@ -3,14 +3,14 @@ import {FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import {Validators} from '@angular/forms';
 import {TodoItem} from '../shared';
 
-import { MdCheckboxChange } from '@angular2-material/checkbox';
+import { MdCheckboxChange } from '@angular/material';
 
 @Component({
-  selector: 'todo',
+  selector: 'app-todo',
   viewProviders: [FormBuilder],
-  templateUrl: './app/todo/todo.html'
+  templateUrl: './todo.component.html'
 })
-export class Todo implements OnInit {
+export class TodoComponent implements OnInit {
   todos: Array<TodoItem>;
 
   fb: FormBuilder;

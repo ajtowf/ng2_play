@@ -1,4 +1,3 @@
-export * from './environment';
-export * from './app';
+export * from './app.component';
+export * from './app.module';
 export * from './auth-guard';
-export * from './routes';

@@ -1,0 +1,32 @@
+<md-sidenav-layout [class.m2app-dark]="isDarkTheme">
+
+  <md-sidenav #sidenav mode="side" class="app-sidenav">
+    Sidenav
+  </md-sidenav>
+
+  <md-toolbar color="primary">
+    <button class="app-icon-button" (click)="sidenav.toggle()">
+      <i class="material-icons app-toolbar-menu">menu</i>
+    </button> ng2play&nbsp;
+
+    <button md-button [routerLink]="['/']">Home</button>
+
+    <span class="app-toolbar-filler"></span>
+
+    <button md-button [routerLink]="['/material']">Material Demo</button>
+    <button md-button *ngIf="loggedIn()" [routerLink]="['/profile']">Profile</button>
+    <button md-button *ngIf="!loggedIn()" (click)="login()">Sign in</button>
+    <button md-button *ngIf="loggedIn()" (click)="logout()">Sign out</button>
+
+    <button md-button (click)="isDarkTheme = !isDarkTheme">TOGGLE THEME</button>
+  </md-toolbar>
+
+  <div class="app-content">
+    <router-outlet></router-outlet>
+  </div>
+
+</md-sidenav-layout>
+
+<span class="app-action" [class.m2app-dark]="isDarkTheme">
+  <button md-fab><md-icon>check circle</md-icon></button>
+</span>

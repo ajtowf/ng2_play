@@ -1,55 +1,50 @@
-import { NgModule }       from '@angular/core';
-import { BrowserModule  } from '@angular/platform-browser';
-import { AppComponent }   from './app';
-import { environment} from './';
-
-import { enableProdMode } from '@angular/core';
-import { bind, provide } from '@angular/core';
-import { LocationStrategy, HashLocationStrategy} from '@angular/common';
-
-import {APP_ROUTER_PROVIDER, AuthGuard} from './';
-import {DataService} from './shared';
-import {HTTP_PROVIDERS, Http} from '@angular/http';
-import {AuthHttp, AuthConfig} from 'angular2-jwt';
-
-import { HttpModule } from '@angular/http';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { HttpModule, Http } from '@angular/http';
+import { MaterialModule } from '@angular/material';
 
-import { MaterialModule } from './material.module'
+import { AppComponent } from './app.component';
+import { Ng2PlayRoutingModule } from './app-routing.module';
 
-import { Todo } from './todo';
-import { About } from './about';
-import { Profile } from './profile';
+import { HomeComponent } from './home';
+import { TodoComponent } from './todo';
+import { AboutComponent } from './about';
+import { ProfileComponent } from './profile';
+import { MaterialComponent } from './material/material.component';
 
-if (environment.production) {
-  enableProdMode();
-}
+import { AuthHttp, AuthConfig } from 'angular2-jwt';
+import { AuthGuard } from './auth-guard';
+import { DataService } from './shared';
 
 @NgModule({
-    declarations: [
-      AppComponent,
-      Todo,
-      About,
-      Profile
-    ],
-    providers: [
-      APP_ROUTER_PROVIDER,
-      bind(LocationStrategy).toClass(HashLocationStrategy),
-      provide(AuthConfig, { useFactory: () => {
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    TodoComponent,
+    AboutComponent,
+    ProfileComponent,
+    MaterialComponent
+  ],
+  imports: [
+    BrowserModule,
+    ReactiveFormsModule,
+    HttpModule,
+    MaterialModule.forRoot(),
+    Ng2PlayRoutingModule
+  ],
+  providers: [
+    {
+      provide: AuthConfig,
+      useFactory: () => {
         return new AuthConfig();
-      }}),
-      AuthHttp,
-      AuthGuard,
-      DataService
-    ],
-    imports:      [
-      BrowserModule,
-      HttpModule, 
-      ReactiveFormsModule,
-      RouterModule,
-      MaterialModule
-    ],
-    bootstrap:    [AppComponent],
+      },
+      deps: [Http]
+    },    
+    AuthHttp,
+    AuthGuard,
+    DataService
+  ],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

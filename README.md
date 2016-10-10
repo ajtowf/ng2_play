@@ -2,7 +2,7 @@
 
 LIVE DEMO: [https://ng2play.azurewebsites.net](https://ng2play.azurewebsites.net)
 
-This repo uses Angular 2 RC5 with Material 2 Alpha 7 and the 3.0 RC1 Router and leverages [Angular CLI](https://github.com/angular/angular-cli).
+This repo uses Angular 2.0.2 Material 2 Alpha 9 and is hosted with Webpack using [Angular CLI](https://github.com/angular/angular-cli).
 
 <img src="screenshots/readme-screen.png" border="0" />
 
@@ -23,6 +23,10 @@ Run the following commands to run the application
     node app.js
 
 # Screencasts
+
+## 2016-10-10 Angular 2.0.2 Full Release!
+
+- https://youtu.be/E4g1hdk9oW0
 
 ## 2016-08-15 Upgrade to RC5 - NgModules and Forms
 
