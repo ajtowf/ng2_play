@@ -40,7 +40,7 @@ import { DataService } from './shared';
         return new AuthConfig();
       },
       deps: [Http]
-    },    
+    },
     AuthHttp,
     AuthGuard,
     DataService

@@ -22,7 +22,7 @@ export class AppComponent {
   }
 
   login() {
-    var self = this;
+    let self = this;
     this.lock.show((err: string, profile: string, id_token: string) => {
       if (err) {
         throw new Error(err);

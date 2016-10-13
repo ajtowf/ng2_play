@@ -17,7 +17,7 @@ export class MaterialComponent implements OnInit {
 
   progress: number = 0;
 
-  constructor() {    
+  constructor() {
   }
 
   ngOnInit() {

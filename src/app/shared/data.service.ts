@@ -8,7 +8,7 @@ export class DataService {
 
   constructor(private authHttp: AuthHttp) {}
 
-  getSecretQuote() : Observable<string> {
+  getSecretQuote(): Observable<string> {
     return this.authHttp
       .get('http://localhost:3002/api/quote')
       .map(res => res.json())

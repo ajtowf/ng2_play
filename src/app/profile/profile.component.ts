@@ -3,7 +3,7 @@ import { DataService } from '../shared';
 
 @Component({
   selector: 'app-profile',
-  templateUrl: './profile.component.html',  
+  templateUrl: './profile.component.html',
 })
 export class ProfileComponent implements OnInit, OnDestroy, AfterContentInit {
   profile: any;
@@ -19,7 +19,7 @@ export class ProfileComponent implements OnInit, OnDestroy, AfterContentInit {
       .getSecretQuote()
       .subscribe(
         data => this.quote = data,
-        err => this.quote = "No connection to backend..."
+        err => this.quote = 'No connection to backend...'
       );
   }
 
